@@ -16,10 +16,10 @@ namespace EagleEye.Data
         [ForeignKey(nameof(VictimId))]
         public virtual Victim Victim { get; set; }
         public int VictimId { get; set; }
-        [ForeignKey(nameof(PerpId))]
+        //[ForeignKey(nameof(PerpId))]
         public virtual Perp Perp { get; set; }
-        public DateTimeOffset TimeOfIncident { get; set; }
-        public DateTimeOffset CreatedUtc { get; set; }
+        public DateTimeOffset? TimeOfIncident { get; set; }
+        public DateTimeOffset? CreatedUtc { get; set; }
 
     }
 }
