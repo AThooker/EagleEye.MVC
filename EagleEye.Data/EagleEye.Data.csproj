@@ -64,6 +64,10 @@
     <Compile Include="Migrations\202008211405445_firstMig.Designer.cs">
       <DependentUpon>202008211405445_firstMig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008241355562_IncidentTable.cs" />
+    <Compile Include="Migrations\202008241355562_IncidentTable.Designer.cs">
+      <DependentUpon>202008241355562_IncidentTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Perp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008211405445_firstMig.resx">
       <DependentUpon>202008211405445_firstMig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008241355562_IncidentTable.resx">
+      <DependentUpon>202008241355562_IncidentTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

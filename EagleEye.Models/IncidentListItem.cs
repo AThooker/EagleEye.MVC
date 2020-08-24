@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EagleEye.Data
+namespace EagleEye.Models
 {
-    public class Incident : Site
+    public class IncidentListItem
     {
+        [Display(Name = "Incident")]
         public int IncidentID { get; set; }
-        public Guid OwnerId { get; set; }
-        public string Phone { get; set; }
+        [Display(Name = "Address")]
+        public string Address { get; set; }
+        [Display(Name = "Description")]
+        public string Description { get; set; }
         [Display(Name = "Victim")]
         public virtual int VictimID { get; set; }
-        [ForeignKey("VictimID")]
-        public virtual Victim Victims { get; set; }
         [Display(Name = "Perp")]
         public virtual int PerpID { get; set; }
-        [ForeignKey("PerpID")]
-        public virtual Perp Perps { get; set; }
+        [Display(Name = "Time Of Incident")]
         public DateTimeOffset? TimeOfIncident { get; set; }
+        [Display(Name = "Created")]
         public DateTimeOffset? CreatedUtc { get; set; }
     }
 }

@@ -32,7 +32,7 @@ namespace EagleEye.Data
             return new ApplicationDbContext();
         }
         public DbSet<Incident> Incidents { get; set; }
-        public DbSet<Victim> victims { get; set; }
+        public DbSet<Victim> Victims { get; set; }
         public DbSet<Perp> Perps { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
