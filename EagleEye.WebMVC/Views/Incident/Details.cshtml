@@ -1,0 +1,66 @@
+﻿@model EagleEye.Models.IncidentDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>IncidentDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IncidentID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IncidentID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VictimID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VictimID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerpID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerpID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeOfIncident)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeOfIncident)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUtc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IncidentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

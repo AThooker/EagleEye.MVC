@@ -31,14 +31,46 @@ namespace EagleEye.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(IncidentCreate model)
         {
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid) return View(model);
+            
+            var service = CreateIncidentService();
+
+            if (service.CreateIncident(model))
             {
-                return View(model);
-            }
+                TempData["SaveResult"] = "Your note was created.";
+                return RedirectToAction("Index");
+            };
+            ModelState.AddModelError("", "Incident could not be recorded.");
+            return View(model);
+        }
+
+        //GET : Details
+        public ActionResult Details(int id)
+        {
+            var service = CreateIncidentService();
+            var model = service.GetIncidentById(id);
+
+            return View(model);
+        }
+        //GET : Edit
+        public ActionResult Edit(int id)
+        {
+            var service = CreateIncidentService();
+            var detail = service.GetIncidentById(id);
+
+            var model = new IncidentEdit
+            {
+                IncidentID = detail.IncidentID,
+                Description = detail.Description,
+                TimeOfIncident = detail.TimeOfIncident
+            };
+            return View(model);
+        }
+        private IncidentService CreateIncidentService()
+        {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new IncidentService(userId);
-            service.CreateIncident(model);
-            return RedirectToAction("Index");
+            return service;
         }
     }
 }

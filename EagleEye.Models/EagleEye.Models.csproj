@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IncidentCreate.cs" />
+    <Compile Include="IncidentDetail.cs" />
     <Compile Include="IncidentListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
