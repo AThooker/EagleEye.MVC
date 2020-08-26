@@ -15,13 +15,9 @@ namespace EagleEye.Models
         public string Address { get; set; }
         [Display(Name = "Description")]
         public string Description { get; set; }
-        [Display(Name = "Victim")]
-        public virtual int VictimID { get; set; }
-        [Display(Name = "Perp")]
-        public virtual int PerpID { get; set; }
         [Display(Name = "Time Of Incident")]
-        public DateTimeOffset? TimeOfIncident { get; set; }
+        public DateTimeOffset TimeOfIncident { get; set; }
         [Display(Name = "Created")]
-        public DateTimeOffset? CreatedUtc { get; set; }
+        public DateTimeOffset CreatedUtc { get; set; }
     }
 }

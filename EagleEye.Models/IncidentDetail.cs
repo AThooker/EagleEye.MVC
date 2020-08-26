@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EagleEye.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -11,13 +12,16 @@ namespace EagleEye.Models
     {
         [Display(Name = "ID")]
         public int IncidentID { get; set; }
-        public string Phone { get; set; }
+        [Display(Name = "Address")]
+        public string Address { get; set; }
         public string Description { get; set; }
-        public virtual int VictimID { get; set; }
-        public virtual int PerpID { get; set; }
+        [Display(Name = "Victim")]
+        public List<Victim> Victim { get; set; }
+        [Display(Name = "Perp")]
+        public List<Perp> Perp { get; set; }
         [Display(Name = "Time Of Incident")]
-        public DateTimeOffset? TimeOfIncident { get; set; }
+        public DateTimeOffset TimeOfIncident { get; set; }
         [Display(Name = "Created")]
-        public DateTimeOffset? CreatedUtc { get; set; }
+        public DateTimeOffset CreatedUtc { get; set; }
     }
 }

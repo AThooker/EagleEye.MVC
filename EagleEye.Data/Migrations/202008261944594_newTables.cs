@@ -3,7 +3,7 @@ namespace EagleEye.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class newTables : DbMigration
     {
         public override void Up()
         {
@@ -11,34 +11,43 @@ namespace EagleEye.Data.Migrations
                 "dbo.Incident",
                 c => new
                     {
-                        SiteID = c.Int(nullable: false, identity: true),
-                        IncidentID = c.Int(nullable: false),
+                        IncidentID = c.Int(nullable: false, identity: true),
                         OwnerId = c.Guid(nullable: false),
-                        Phone = c.String(),
-                        VictimId = c.Int(nullable: false),
                         TimeOfIncident = c.DateTimeOffset(nullable: false, precision: 7),
                         CreatedUtc = c.DateTimeOffset(nullable: false, precision: 7),
                         Address = c.String(),
                         Description = c.String(),
                     })
-                .PrimaryKey(t => t.SiteID)
-                .ForeignKey("dbo.Victim", t => t.VictimId, cascadeDelete: true)
-                .Index(t => t.VictimId);
+                .PrimaryKey(t => t.IncidentID);
+            
+            CreateTable(
+                "dbo.Perp",
+                c => new
+                    {
+                        PerpID = c.Int(nullable: false, identity: true),
+                        Height = c.String(),
+                        Build = c.String(),
+                        Age = c.Int(nullable: false),
+                        Transportation = c.String(),
+                        IncidentId = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.PerpID)
+                .ForeignKey("dbo.Incident", t => t.IncidentId, cascadeDelete: true)
+                .Index(t => t.IncidentId);
             
             CreateTable(
                 "dbo.Victim",
                 c => new
                     {
                         VictimID = c.Int(nullable: false, identity: true),
-                        OwnerId = c.Guid(nullable: false),
                         Height = c.String(),
                         Build = c.String(),
                         Age = c.Int(nullable: false),
-                        PerpID = c.Int(),
-                        Transportation = c.String(),
-                        Discriminator = c.String(nullable: false, maxLength: 128),
+                        IncidentId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.VictimID);
+                .PrimaryKey(t => t.VictimID)
+                .ForeignKey("dbo.Incident", t => t.IncidentId, cascadeDelete: true)
+                .Index(t => t.IncidentId);
             
             CreateTable(
                 "dbo.IdentityRole",
@@ -118,18 +127,21 @@ namespace EagleEye.Data.Migrations
             DropForeignKey("dbo.IdentityUserLogin", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserClaim", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
-            DropForeignKey("dbo.Incident", "VictimId", "dbo.Victim");
+            DropForeignKey("dbo.Victim", "IncidentId", "dbo.Incident");
+            DropForeignKey("dbo.Perp", "IncidentId", "dbo.Incident");
             DropIndex("dbo.IdentityUserLogin", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserClaim", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "IdentityRole_Id" });
-            DropIndex("dbo.Incident", new[] { "VictimId" });
+            DropIndex("dbo.Victim", new[] { "IncidentId" });
+            DropIndex("dbo.Perp", new[] { "IncidentId" });
             DropTable("dbo.IdentityUserLogin");
             DropTable("dbo.IdentityUserClaim");
             DropTable("dbo.ApplicationUser");
             DropTable("dbo.IdentityUserRole");
             DropTable("dbo.IdentityRole");
             DropTable("dbo.Victim");
+            DropTable("dbo.Perp");
             DropTable("dbo.Incident");
         }
     }

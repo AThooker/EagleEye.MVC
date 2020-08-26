@@ -10,7 +10,6 @@ namespace EagleEye.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "EagleEye.Data.ApplicationDbContext";
         }
 
         protected override void Seed(EagleEye.Data.ApplicationDbContext context)

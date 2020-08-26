@@ -10,18 +10,12 @@ namespace EagleEye.Data
 {
     public class Incident : Site
     {
+        [Key]
         public int IncidentID { get; set; }
         public Guid OwnerId { get; set; }
-        public string Phone { get; set; }
-        [Display(Name = "Victim")]
-        public virtual int VictimID { get; set; }
-        [ForeignKey("VictimID")]
-        public virtual Victim Victims { get; set; }
-        [Display(Name = "Perp")]
-        public virtual int PerpID { get; set; }
-        [ForeignKey("PerpID")]
-        public virtual Perp Perps { get; set; }
-        public DateTimeOffset? TimeOfIncident { get; set; }
-        public DateTimeOffset? CreatedUtc { get; set; }
+        public DateTimeOffset TimeOfIncident { get; set; }
+        public DateTimeOffset CreatedUtc { get; set; }
+        public virtual ICollection<Victim> Victims { get; set; }
+        public virtual ICollection<Perp> Perps { get; set; }
     }
 }

@@ -19,27 +19,35 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Phone)
+            @Html.DisplayNameFor(model => model.Address)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Phone)
+            @Html.DisplayFor(model => model.Address)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.VictimID)
+            @Html.DisplayNameFor(model => model.Description)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.VictimID)
+            @Html.DisplayFor(model => model.Description)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PerpID)
+            @Html.DisplayNameFor(model => model.Victim)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PerpID)
+            @Html.DisplayFor(model => model.Victim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Perp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Perp)
         </dd>
 
         <dt>
@@ -61,6 +69,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.IncidentID }) |
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

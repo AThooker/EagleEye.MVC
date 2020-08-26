@@ -56,12 +56,19 @@
   <ItemGroup>
     <Compile Include="IncidentCreate.cs" />
     <Compile Include="IncidentDetail.cs" />
+    <Compile Include="IncidentEdit.cs" />
     <Compile Include="IncidentListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EagleEye.Data\EagleEye.Data.csproj">
+      <Project>{81B1B1BC-6C27-4788-85F1-0C8371259E08}</Project>
+      <Name>EagleEye.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

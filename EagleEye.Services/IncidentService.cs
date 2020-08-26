@@ -20,21 +20,35 @@ namespace EagleEye.Services
 
         public bool CreateIncident(IncidentCreate model)
         {
-            var entity = new Incident()
+            var ctx = new ApplicationDbContext();
+            var victim = new Victim()
+            {
+                Height = model.VictimHeight,
+                Build = model.VictimBuild,
+                Age = model.VictimAge
+            };
+            ctx.Victims.Add(victim);
+            
+            var perp = new Perp()
+            {
+                Height = model.PerpHeight,
+                Build = model.PerpBuild,
+                Age = model.PerpAge,
+                Transportation = model.Transportation
+            };
+            ctx.Perps.Add(perp);
+            var incident = new Incident()
             {
                 OwnerId = _userId,
                 Address = model.Address,
                 Description = model.Description,
-                VictimID = model.VictimID,
-                PerpID = model.PerpID,
                 TimeOfIncident = model.TimeOfIncident,
                 CreatedUtc = DateTimeOffset.Now
             };
-            using (var ctx = new ApplicationDbContext())
-            {
-                ctx.Incidents.Add(entity);
-                return ctx.SaveChanges() == 1;
-            }
+            ctx.Incidents.Add(incident);
+
+            return ctx.SaveChanges() >= 1;
+            
         }
         public IEnumerable<IncidentListItem> GetIncidents()
         {
@@ -49,11 +63,10 @@ namespace EagleEye.Services
                         IncidentID = e.IncidentID,
                         Address = e.Address,
                         Description = e.Description,
-                        VictimID = e.VictimID,
-                        PerpID = e.PerpID,
                         TimeOfIncident = e.TimeOfIncident,
                         CreatedUtc = e.CreatedUtc
                     });
+                
                 return query.ToArray();
             }
         }
@@ -67,11 +80,11 @@ namespace EagleEye.Services
                 return new IncidentDetail
                 {
                     IncidentID = entity.IncidentID,
-                    Phone = entity.Phone,
+                    Address = entity.Address,
                     Description = entity.Description,
-                    VictimID = entity.VictimID,
-                    PerpID = entity.PerpID,
                     TimeOfIncident = entity.TimeOfIncident,
+                    Victim = entity.Victims.Where(e => e.IncidentId == entity.IncidentID).ToList(),
+                    Perp = entity.Perps.Where(e => e.IncidentId == entity.IncidentID).ToList(),
                     CreatedUtc = entity.CreatedUtc
                 };
             }

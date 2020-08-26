@@ -56,17 +56,9 @@
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Incident.cs" />
-    <Compile Include="Migrations\202008211333353_InitialCreate.cs" />
-    <Compile Include="Migrations\202008211333353_InitialCreate.Designer.cs">
-      <DependentUpon>202008211333353_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202008211405445_firstMig.cs" />
-    <Compile Include="Migrations\202008211405445_firstMig.Designer.cs">
-      <DependentUpon>202008211405445_firstMig.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202008241355562_IncidentTable.cs" />
-    <Compile Include="Migrations\202008241355562_IncidentTable.Designer.cs">
-      <DependentUpon>202008241355562_IncidentTable.cs</DependentUpon>
+    <Compile Include="Migrations\202008261944594_newTables.cs" />
+    <Compile Include="Migrations\202008261944594_newTables.Designer.cs">
+      <DependentUpon>202008261944594_newTables.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Perp.cs" />
@@ -79,14 +71,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202008211333353_InitialCreate.resx">
-      <DependentUpon>202008211333353_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202008211405445_firstMig.resx">
-      <DependentUpon>202008211405445_firstMig.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202008241355562_IncidentTable.resx">
-      <DependentUpon>202008241355562_IncidentTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202008261944594_newTables.resx">
+      <DependentUpon>202008261944594_newTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

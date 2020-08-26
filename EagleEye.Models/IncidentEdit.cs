@@ -15,6 +15,6 @@ namespace EagleEye.Models
         [MinLength(10, ErrorMessage = "Please enter at least 10 characters.")]
         public string Description { get; set; }
         [Display(Name = "Time Of Incident")]
-        public DateTimeOffset? TimeOfIncident { get; set; }
+        public DateTimeOffset TimeOfIncident { get; set; }
     }
 }

@@ -7,13 +7,13 @@ namespace EagleEye.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class IncidentTable : IMigrationMetadata
+    public sealed partial class newTables : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(IncidentTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(newTables));
         
         string IMigrationMetadata.Id
         {
-            get { return "202008241355562_IncidentTable"; }
+            get { return "202008261944594_newTables"; }
         }
         
         string IMigrationMetadata.Source

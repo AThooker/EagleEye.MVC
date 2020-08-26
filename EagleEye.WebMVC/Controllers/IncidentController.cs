@@ -27,7 +27,7 @@ namespace EagleEye.WebMVC.Controllers
             return View();
         }
         //POST : Create
-        [HttpPost] // this is what pushes the user data from the view, through the service, and into the data datase
+        [HttpPost] // this is what pushes the user data from the view, through the service, and into the database
         [ValidateAntiForgeryToken]
         public ActionResult Create(IncidentCreate model)
         {

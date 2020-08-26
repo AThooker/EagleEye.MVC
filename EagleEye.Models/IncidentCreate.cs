@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EagleEye.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -16,11 +17,21 @@ namespace EagleEye.Models
         [Display(Name = "Description")]
         [MinLength(10, ErrorMessage = "Please enter at least 10 characters.")]
         public string Description { get; set; }
-        [Display(Name = "Victim")]
-        public int VictimID { get; set; }
-        [Display(Name = "Perp")]
-        public virtual int PerpID { get; set; }
         [Display(Name = "Time Of Incident")]
-        public DateTimeOffset? TimeOfIncident { get; set; }
+        public DateTimeOffset TimeOfIncident { get; set; }
+        [Display(Name = "Victim Height")]
+        public string VictimHeight { get; set; }
+        [Display(Name = "Victim Build")]
+        public string VictimBuild { get; set; }
+        [Display(Name = "Victim Age")]
+        public int VictimAge { get; set; }
+        [Display(Name = "Perp Height")]
+        public string PerpHeight { get; set; }
+        [Display(Name = "Perp Build")]
+        public string PerpBuild { get; set; }
+        [Display(Name = "Perp Age")]
+        public int PerpAge { get; set; }
+        [Display(Name = "Perp Transportation")]
+        public string Transportation { get; set; }
     }
 }

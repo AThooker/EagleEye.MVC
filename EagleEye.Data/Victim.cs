@@ -11,9 +11,10 @@ namespace EagleEye.Data
     {
         [Key]
         public int VictimID { get; set; }
-        public Guid OwnerId { get; set; }
         public string Height { get; set; }
         public string Build { get; set; }
         public int Age { get; set; }
+        public int IncidentId { get; set; }
+        public virtual Incident Incident { get; set; }
     }
 }
