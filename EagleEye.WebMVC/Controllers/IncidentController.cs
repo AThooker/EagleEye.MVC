@@ -66,6 +66,49 @@ namespace EagleEye.WebMVC.Controllers
             };
             return View(model);
         }
+        //POST : Edit 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, IncidentEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+            if (model.IncidentID != id)
+            {
+                ModelState.AddModelError("", "ID does not match");
+                return View(model);
+            }
+
+            var service = CreateIncidentService();
+
+            if (service.EditIncident(model))
+            {
+                TempData["SaveResult"] = "Your incident was updated correctly.";
+                return RedirectToAction("Index");
+            }
+            ModelState.AddModelError("", "Your note could not be updated.");
+            return View(model);
+        }
+        //GET : Delete
+        public ActionResult Delete(int id)
+        {
+            var service = CreateIncidentService();
+            var model = service.GetIncidentById(id);
+
+            return View(model);
+        }
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = CreateIncidentService();
+
+            service.DeleteIncident(id);
+
+            TempData["SaveResult"] = "Your incident was deleted";
+
+            return RedirectToAction("Index");
+        }
         private IncidentService CreateIncidentService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

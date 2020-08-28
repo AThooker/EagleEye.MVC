@@ -104,6 +104,17 @@ namespace EagleEye.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+        public bool DeleteIncident(int incidentID)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                    .Incidents
+                    .Single(e => e.IncidentID == incidentID && e.OwnerId == _userId);
+                ctx.Incidents.Remove(entity);
+                return ctx.SaveChanges() == 1;
+            }
+        }
 
     }
 }
