@@ -37,10 +37,10 @@ namespace EagleEye.WebMVC.Controllers
 
             if (service.CreateIncident(model))
             {
-                TempData["SaveResult"] = "Your note was created.";
+                TempData["SaveResult"] = "You have successfully reported the incident.";
                 return RedirectToAction("Index");
             };
-            ModelState.AddModelError("", "Incident could not be recorded.");
+            ModelState.AddModelError("", "The incident could not be recorded.");
             return View(model);
         }
 
@@ -82,10 +82,10 @@ namespace EagleEye.WebMVC.Controllers
 
             if (service.EditIncident(model))
             {
-                TempData["SaveResult"] = "Your incident was updated correctly.";
+                TempData["SaveResult"] = "The incident was updated correctly.";
                 return RedirectToAction("Index");
             }
-            ModelState.AddModelError("", "Your note could not be updated.");
+            ModelState.AddModelError("", "The incident could not be updated.");
             return View(model);
         }
         //GET : Delete
@@ -105,7 +105,7 @@ namespace EagleEye.WebMVC.Controllers
 
             service.DeleteIncident(id);
 
-            TempData["SaveResult"] = "Your incident was deleted";
+            TempData["SaveResult"] = "The incident was deleted";
 
             return RedirectToAction("Index");
         }

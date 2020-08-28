@@ -59,6 +59,8 @@
     <Compile Include="IncidentEdit.cs" />
     <Compile Include="IncidentListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VictimDetail.cs" />
+    <Compile Include="VictimEdit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

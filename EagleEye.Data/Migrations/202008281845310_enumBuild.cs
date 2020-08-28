@@ -3,7 +3,7 @@ namespace EagleEye.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class newTables : DbMigration
+    public partial class enumBuild : DbMigration
     {
         public override void Up()
         {
@@ -26,8 +26,8 @@ namespace EagleEye.Data.Migrations
                     {
                         PerpID = c.Int(nullable: false, identity: true),
                         Height = c.String(),
-                        Build = c.String(),
-                        Age = c.Int(nullable: false),
+                        Build = c.Int(nullable: false),
+                        Age = c.Int(),
                         Transportation = c.String(),
                         IncidentId = c.Int(nullable: false),
                     })
@@ -41,8 +41,8 @@ namespace EagleEye.Data.Migrations
                     {
                         VictimID = c.Int(nullable: false, identity: true),
                         Height = c.String(),
-                        Build = c.String(),
-                        Age = c.Int(nullable: false),
+                        Build = c.Int(nullable: false),
+                        Age = c.Int(),
                         IncidentId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.VictimID)

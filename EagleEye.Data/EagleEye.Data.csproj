@@ -56,9 +56,9 @@
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Incident.cs" />
-    <Compile Include="Migrations\202008261944594_newTables.cs" />
-    <Compile Include="Migrations\202008261944594_newTables.Designer.cs">
-      <DependentUpon>202008261944594_newTables.cs</DependentUpon>
+    <Compile Include="Migrations\202008281845310_enumBuild.cs" />
+    <Compile Include="Migrations\202008281845310_enumBuild.Designer.cs">
+      <DependentUpon>202008281845310_enumBuild.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Perp.cs" />
@@ -71,8 +71,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202008261944594_newTables.resx">
-      <DependentUpon>202008261944594_newTables.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202008281845310_enumBuild.resx">
+      <DependentUpon>202008281845310_enumBuild.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

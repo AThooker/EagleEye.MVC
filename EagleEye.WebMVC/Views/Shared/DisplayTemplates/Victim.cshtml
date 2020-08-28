@@ -1,11 +1,17 @@
 ﻿@model EagleEye.Data.Victim
-
-<li>
-    @Html.DisplayNameFor(e => e.Height): @Model.Height
-</li>
-<li>
-    @Html.DisplayNameFor(e => e.Build): @Model.Build
-</li>
-<li>
-    @Html.DisplayNameFor(e => e.Age): @Model.Age
-</li>
+    <ul class="vicDetails">
+        <li>
+            @Html.DisplayNameFor(e => e.VictimID): @Model.VictimID
+        </li>
+        <li>
+            @Html.DisplayNameFor(e => e.Height): @Model.Height
+        </li>
+        <li>
+            @Html.DisplayNameFor(e => e.Build): @Model.Build
+        </li>
+        <li>
+            @Html.DisplayNameFor(e => e.Age): @Model.Age
+        </li>
+        @Html.ActionLink("Edit", "Edit", "Victim", new { id = Model.VictimID }, null) |
+        @Html.ActionLink("Delete", "Delete", "Victim", new { id = Model.VictimID }, null)
+    </ul>
