@@ -242,6 +242,7 @@
     <Content Include="Views\Shared\DisplayTemplates\Perp.cshtml" />
     <Content Include="Views\Incident\Edit.cshtml" />
     <Content Include="Views\Incident\Delete.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTimeOffSet.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
