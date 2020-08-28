@@ -10,6 +10,7 @@ namespace EagleEye.Data
     public class Victim
     {
         [Key]
+        [Display(Name = "ID")]
         public int VictimID { get; set; }
         public string Height { get; set; }
         public string Build { get; set; }

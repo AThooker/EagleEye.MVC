@@ -238,6 +238,8 @@
     <Content Include="Views\Incident\Create.cshtml" />
     <Content Include="Views\Incident\Index.cshtml" />
     <Content Include="Views\Incident\Details.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Victim.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Perp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

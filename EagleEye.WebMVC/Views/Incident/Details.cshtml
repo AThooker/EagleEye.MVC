@@ -2,8 +2,9 @@
 
 @{
     ViewBag.Title = "Details";
-}
 
+    var vicList = new List<EagleEye.Data.Victim>();
+}
 <h2>Details</h2>
 
 <div>
@@ -33,23 +34,6 @@
         <dd>
             @Html.DisplayFor(model => model.Description)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Victim)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Victim)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Perp)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Perp)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.TimeOfIncident)
         </dt>
@@ -64,6 +48,19 @@
 
         <dd>
             @Html.DisplayFor(model => model.CreatedUtc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Victim)
+        </dt>
+        <dd>
+            @Html.DisplayFor(e => e.Victim)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Perp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Perp)
         </dd>
 
     </dl>
