@@ -55,6 +55,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IncidentService.cs" />
+    <Compile Include="IVictimPerpService.cs" />
+    <Compile Include="PerpService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VictimService.cs" />
   </ItemGroup>

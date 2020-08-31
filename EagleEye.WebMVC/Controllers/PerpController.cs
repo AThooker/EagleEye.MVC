@@ -9,20 +9,20 @@ using System.Web.Mvc;
 
 namespace EagleEye.WebMVC.Controllers
 {
-    public class VictimController : Controller
+    public class PerpController : Controller
     {
         //GET : Edit
         public ActionResult Edit(int? id)
         {
-            var service = CreateVictimService();
-            var detail = service.GetVictimById(id);
-
-            var model = new VictimEdit
+            var service = CreatePerpService();
+            var detail = service.GetPerpById(id);
+            var model = new PerpEdit
             {
-                VictimID = detail.VictimID,
+                PerpID = detail.PerpID,
                 Height = detail.Height,
                 Build = detail.Build,
-                Age = detail.Age
+                Age = detail.Age,
+                Transportaion = detail.Transportation
             };
             return View(model);
         }
@@ -30,30 +30,30 @@ namespace EagleEye.WebMVC.Controllers
         [HttpPost]
         [ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, VictimEdit model)
+        public ActionResult Edit(int id, PerpEdit model)
         {
             if (!ModelState.IsValid) return View(model);
-            if (model.VictimID != id)
+            if (model.PerpID != id)
             {
                 ModelState.AddModelError("", "ID does not match");
                 return View(model);
             }
 
-            var service = CreateVictimService();
+            var service = CreatePerpService();
 
-            if (service.EditVictim(model))
+            if (service.EditPerp(model))
             {
-                TempData["SaveResult"] = "The victim details were updated correctly.";
+                TempData["SaveResult"] = "The perp details were updated correctly.";
                 return RedirectToAction("Index", "Incident");
             }
-            ModelState.AddModelError("", "Victim details could not be updated.");
+            ModelState.AddModelError("", "Perp details could not be updated.");
             return View(model);
         }
         //GET : Delete
         public ActionResult Delete(int id)
         {
-            var service = CreateVictimService();
-            var model = service.GetVictimById(id);
+            var service = CreatePerpService();
+            var model = service.GetPerpById(id);
 
             return View(model);
         }
@@ -63,18 +63,18 @@ namespace EagleEye.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteVictim(int id)
         {
-            var service = CreateVictimService();
+            var service = CreatePerpService();
 
-            service.DeleteVictim(id);
+            service.DeletePerp(id);
 
-            TempData["SaveResult"] = "Victim was deleted";
+            TempData["SaveResult"] = "Perp was deleted";
 
             return RedirectToAction("Index", "Incident");
         }
-        public VictimService CreateVictimService()
+        public PerpService CreatePerpService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new VictimService(userId);
+            var service = new PerpService(userId);
             return service;
         }
     }

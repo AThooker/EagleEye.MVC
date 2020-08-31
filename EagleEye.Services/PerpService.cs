@@ -8,55 +8,57 @@ using System.Threading.Tasks;
 
 namespace EagleEye.Services
 {
-    public class VictimService
+    public class PerpService
     {
         private Guid _userId;
 
-        public VictimService(Guid userId)
+        public PerpService(Guid userId)
         {
             _userId = userId;
 
         }
-        public VictimDetail GetVictimById(int? id)
+        public PerpDetail GetPerpById(int? id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx
-                    .Victims
-                    .Single(e => e.VictimID == id);
-                return new VictimDetail
+                    .Perps
+                    .Single(e => e.PerpID == id);
+                return new PerpDetail
                 {
-                    VictimID = entity.VictimID,
+                    PerpID = entity.PerpID,
                     Height = entity.Height,
                     Build = entity.Build,
-                    Age = entity.Age
+                    Age = entity.Age,
+                    Transportation = entity.Transportation
                 };
             }
         }
-        public bool EditVictim(VictimEdit model)
+        public bool EditPerp(PerpEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx
-                    .Victims
-                    .Single(e => e.VictimID == model.VictimID);
+                    .Perps
+                    .Single(e => e.PerpID == model.PerpID);
 
-                entity.VictimID = model.VictimID;
+                entity.PerpID = model.PerpID;
                 entity.Height = model.Height;
                 entity.Build = model.Build;
                 entity.Age = model.Age;
+                entity.Transportation = model.Transportaion;
 
                 return ctx.SaveChanges() == 1;
             }
         }
-        public bool DeleteVictim(int victimID)
+        public bool DeletePerp(int perpID)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx
-                    .Victims
-                    .Single(e => e.VictimID == victimID);
-                ctx.Victims.Remove(entity);
+                    .Perps
+                    .Single(e => e.PerpID == perpID);
+                ctx.Perps.Remove(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
