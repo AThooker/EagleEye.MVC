@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 class="logoHead"><a href="https://localhost:44371/"><img src="~/EagleEyeLogo.png" alt="Eagle Eye" width="250" , height="190" /></a></h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", null, new { @class = "create" })
 </p>
 @if (TempData.ContainsKey("SaveResult"))
 {
@@ -58,11 +58,15 @@
                 @Html.DisplayFor(modelItem => item.CreatedUtc)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.IncidentID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.IncidentID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.IncidentID })
+                @Html.ActionLink("Edit", "Edit", new { id = item.IncidentID }, new { @class = "attrib" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.IncidentID }, new { @class = "attrib" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.IncidentID }, new { @class = "attrib" })
             </td>
         </tr>
     }
 
 </table>
+<a href="https://reliefweb.int/report/world/trafficking-persons-report-2020"><img src="~/busyStreet.jpg" alt="Eagle Eye" width="700" , height="240" class="street"/></a>
+<p class="click">Click anywhere on the picture for more information on Human Trafficking</p>
+
+<p class="homeBtn"><a href="https://localhost:44371/Home/" class="btn btn-primary btn-lg" id="homeBtn">&#10038 Homepage &#10038;</a></p>
