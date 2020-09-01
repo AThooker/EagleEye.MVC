@@ -14,7 +14,7 @@ namespace EagleEye.Models
         public int PerpID { get; set; }
         public string Height { get; set; }
         [Display(Name = "Build")]
-        public Build Build { get; set; }
+        public Build? Build { get; set; }
         [Display(Name = "Age")]
         public int? Age { get; set; }
         [Display(Name = "Transportation")]

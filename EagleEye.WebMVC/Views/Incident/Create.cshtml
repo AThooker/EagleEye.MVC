@@ -49,7 +49,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.VictimBuild, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownListFor(model => model.VictimBuild, new SelectList(Enum.GetValues(typeof(EagleEye.Data.Build))), new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownListFor(model => model.VictimBuild, new SelectList(Enum.GetValues(typeof(EagleEye.Data.Build))), "--Size--" , new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.VictimBuild, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -73,7 +73,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.PerpBuild, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownListFor(model => model.PerpBuild, new SelectList(Enum.GetValues(typeof(EagleEye.Data.Build))), new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownListFor(model => model.PerpBuild, new SelectList(Enum.GetValues(typeof(EagleEye.Data.Build))), "--Size--", new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.PerpBuild, "", new { @class = "text-danger" })
             </div>
         </div>

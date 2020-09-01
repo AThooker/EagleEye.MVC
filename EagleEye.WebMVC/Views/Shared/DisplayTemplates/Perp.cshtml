@@ -1,14 +1,18 @@
 ﻿@model EagleEye.Data.Perp
 
-<li>
-    @Html.DisplayNameFor(e => e.Height): @Model.Height
-</li>
-<li>
-    @Html.DisplayNameFor(e => e.Build): @Model.Build
-</li>
-<li>
-    @Html.DisplayNameFor(e => e.Age): @Model.Age
-</li>
-<li>
-    @Html.DisplayNameFor(e => e.Transportation): @Model.Transportation
-</li>
+<ul>
+    <li>
+        @Html.DisplayNameFor(e => e.Height): @Model.Height
+    </li>
+    <li>
+        @Html.DisplayNameFor(e => e.Build): @Model.Build
+    </li>
+    <li>
+        @Html.DisplayNameFor(e => e.Age): @Model.Age
+    </li>
+    <li>
+        @Html.DisplayNameFor(e => e.Transportation): @Model.Transportation
+    </li>
+    @Html.ActionLink("Edit", "Edit", "Perp", new { id = Model.PerpID }, null) |
+    @Html.ActionLink("Delete", "Delete", "Perp", new { id = Model.PerpID }, null)
+</ul>

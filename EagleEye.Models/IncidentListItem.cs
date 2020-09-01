@@ -9,7 +9,7 @@ namespace EagleEye.Models
 {
     public class IncidentListItem
     {
-        [Display(Name = "Incident")]
+        [Display(Name = "Incident ID")]
         public int IncidentID { get; set; }
         [Display(Name = "Address")]
         public string Address { get; set; }

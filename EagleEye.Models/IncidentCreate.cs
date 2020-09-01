@@ -22,14 +22,14 @@ namespace EagleEye.Models
         [Display(Name = "Victim Height")]
         public string VictimHeight { get; set; }
         [Display(Name = "Victim Build")]
-        public Build VictimBuild { get; set; }
+        public Build? VictimBuild { get; set; }
         [Display(Name = "Victim Age")]
         [Range(1, 110, ErrorMessage = "Please report an age between 1 and 100")]
         public int? VictimAge { get; set; }
         [Display(Name = "Perp Height")]
         public string PerpHeight { get; set; }
         [Display(Name = "Perp Build")]
-        public Build PerpBuild { get; set; }
+        public Build? PerpBuild { get; set; }
         [Display(Name = "Perp Age")]
         [Range(1, 110, ErrorMessage = "Please report an age between 1 and 100")]
         public int? PerpAge { get; set; }
