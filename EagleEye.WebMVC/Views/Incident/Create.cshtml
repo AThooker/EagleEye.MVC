@@ -12,98 +12,97 @@
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
-        <h6 id="infoSmall">No information is too small</h6>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger"})
-        <div class="form-group">
-            @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2", style = "font-size: 24px; font-family: 'Times New Roman', Times, serif;" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2", style = "font-size: 24px; font-family: 'Times New Roman', Times, serif;" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.TimeOfIncident, htmlAttributes: new { @class = "control-label col-md-2", style = "font-size: 20px; font-family: 'Times New Roman', Times, serif;" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TimeOfIncident, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TimeOfIncident, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.VictimHeight, htmlAttributes: new { @class = "control-label col-md-2", style = "font-size: 12px; font-family: 'Times New Roman', Times, serif;" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.VictimHeight, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.VictimHeight, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.VictimBuild, htmlAttributes: new { @class = "control-label col-md-2", style = "font-size: 12px; font-family: 'Times New Roman', Times, serif;" })
-            <div class="col-md-10">
-                @Html.DropDownListFor(model => model.VictimBuild, new SelectList(Enum.GetValues(typeof(EagleEye.Data.Build))), "--Size--" , new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.VictimBuild, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.VictimAge, htmlAttributes: new { @class = "control-label col-md-2", style = "font-size: 12px; font-family: 'Times New Roman', Times, serif;" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.VictimAge, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.VictimAge, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.PerpHeight, htmlAttributes: new { @class = "control-label col-md-2", style = "font-size: 12px; font-family: 'Times New Roman', Times, serif;" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PerpHeight, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PerpHeight, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.PerpBuild, htmlAttributes: new { @class = "control-label col-md-2", style = "font-size: 12px; font-family: 'Times New Roman', Times, serif;" })
-            <div class="col-md-10">
-                @Html.DropDownListFor(model => model.PerpBuild, new SelectList(Enum.GetValues(typeof(EagleEye.Data.Build))), "--Size--", new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PerpBuild, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.PerpAge, htmlAttributes: new { @class = "control-label col-md-2", style = "font-size: 12px; font-family: 'Times New Roman', Times, serif;" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PerpAge, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PerpAge, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Transportation, htmlAttributes: new { @class = "control-label col-md-2", style = "font-size: 12px; font-family: 'Times New Roman', Times, serif;" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Transportation, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Transportation, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
+<div class="form-horizontal">
+    <h6 id="infoSmall">No information is too small</h6>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2", style = "font-size: 20px; font-family: 'Times New Roman', Times, serif;" })
+        <div class="col-md-10">
+            <div class="labels" style="font-size: 10px;">(Location of incident)</div>
+            @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control long-width", style = "width: 600px;" } })
+            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
         </div>
     </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2", style = "font-size: 20px; font-family: 'Times New Roman', Times, serif;" })
+        <div class="col-md-10">
+            <div class="labels" style="font-size: 10px;">(Details of what happened)</div>
+            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control long-width" } })
+            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.TimeOfIncident, htmlAttributes: new { @class = "control-label col-md-2", style = "font-size: 20px; font-family: 'Times New Roman', Times, serif;" })
+        <div class="col-md-10">
+            <div class="labels" style="font-size: 10px;">(i.e. MM/DD/YYYY)</div>
+            @Html.EditorFor(model => model.TimeOfIncident, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.TimeOfIncident, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <hr />
+    <div class="victim"><b>Victim:</b></div>
+    <div class="form-group" style="display: block;">
+        @Html.LabelFor(model => model.VictimHeight, htmlAttributes: new { @class = "control-label col-md-2", style = "font-size: 12px; font-family: 'Times New Roman', Times, serif; margin-left: 90px;" })
+        <div class="col-md-1">
+            <div class="vHeight" style="font-size: 10px; margin-top: 25px; margin-bottom: -8px;">(i.e. 6'0" or 6ft)</div>
+            @Html.EditorFor(model => model.VictimHeight, new { htmlAttributes = new { @class = "form-control", style = "margin-top: 8px; margin-left: -80px;" } })
+            @Html.ValidationMessageFor(model => model.VictimHeight, "", new { @class = "text-danger" })
+        </div>
+        @Html.LabelFor(model => model.VictimBuild, htmlAttributes: new { @class = "control-label col-md-2", style = "font-size: 12px; font-family: 'Times New Roman', Times, serif; margin-left: -115px;" })
+        <div class="col-md-1" style="margin-left: -76px;">
+            <div class="labels" style="font-size: 10px; display:block; margin-top: 25px; margin-bottom: 5px;">(Best option)</div>
+            @Html.DropDownListFor(model => model.VictimBuild, new SelectList(Enum.GetValues(typeof(EagleEye.Data.Build))), "--Size--", new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.VictimBuild, "", new { @class = "text-danger" })
+        </div>
+        @Html.LabelFor(model => model.VictimAge, htmlAttributes: new { @class = "control-label col-md-2", style = "font-size: 12px; font-family: 'Times New Roman', Times, serif; margin-left: -20px; margin-top: -1px;" })
+        <div class="col-md-1" style="margin-left: -70px; margin-top: 25px;">
+            <div class="labels" style="font-size: 10px; margin-left: 5px;">(# 1 - 100)</div>
+            @Html.EditorFor(model => model.VictimAge, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.VictimAge, "", new { @class = "text-danger" })
+        </div>
+    </div>
+        <hr />
+    <div class="perp"><b>Perpetrator:</b></div>
+
+    <div class="form-group" style="display: block;">
+        @Html.LabelFor(model => model.PerpHeight, htmlAttributes: new { @class = "control-label col-md-2", style = "font-size: 12px; font-family: 'Times New Roman', Times, serif; margin-left: 100px;" })
+        <div class="col-md-1">
+            <div class="vHeight" style="font-size: 10px; margin-top: 25px; margin-bottom: -8px;">(i.e. 6'0" or 6ft)</div>
+            @Html.EditorFor(model => model.PerpHeight, new { htmlAttributes = new { @class = "form-control", style = "margin-top: 8px; margin-left: -80px;" } })
+            @Html.ValidationMessageFor(model => model.PerpHeight, "", new { @class = "text-danger" })
+        </div>
+        @Html.LabelFor(model => model.PerpBuild, htmlAttributes: new { @class = "control-label col-md-2", style = "font-size: 12px; font-family: 'Times New Roman', Times, serif; margin-left: -180px;" })
+        <div class="col-md-1" style="margin-left: -70px;">
+            <div class="labels" style="font-size: 10px; display:block; margin-top: 25px; margin-bottom: 5px; margin-left: 3px;">(Best option)</div>
+            @Html.DropDownListFor(model => model.PerpBuild, new SelectList(Enum.GetValues(typeof(EagleEye.Data.Build))), "--Size--", new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.PerpBuild, "", new { @class = "text-danger" })
+        </div>
+        @Html.LabelFor(model => model.PerpAge, htmlAttributes: new { @class = "control-label col-md-2", style = "font-size: 12px; font-family: 'Times New Roman', Times, serif; margin-left: -90px; margin-top: -1px;" })
+        <div class="col-md-1" style="margin-left: -70px; margin-top: 25px;">
+            <div class="labels" style="font-size: 10px; margin-left: 5px;">(# 1 - 100)</div>
+            @Html.EditorFor(model => model.PerpAge, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.PerpAge, "", new { @class = "text-danger" })
+        </div>
+        @Html.LabelFor(model => model.Transportation, htmlAttributes: new { @class = "control-label col-md-2", style = "font-size: 12px; font-family: 'Times New Roman', Times, serif; margin-left: -60px;" })
+        <div class="col-md-1" style="margin-left: -110px; margin-top: 25px;">
+            <div class="labels" style="font-size: 10px;">(i.e. truck, car, etc)</div>
+            @Html.EditorFor(model => model.Transportation, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Transportation, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <hr />
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10" style="margin-left: 285px; margin-top: 20px;">
+            <input type="submit" value= "Submit" class="btn btn-default btn-block" style="border: 4px solid black; background-color: grey; color: ghostwhite; "/>
+        </div>
+    </div>
+</div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", null, new { style = "color: black;" })
 </div>

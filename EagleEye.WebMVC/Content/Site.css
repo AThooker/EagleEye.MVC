@@ -126,9 +126,31 @@ tr {
     margin-left: 10px;
 }
 .form-group {
-    margin-left: 200px !important;
+    margin-left: 100px !important;
     width: 1200px !important;
-    /*background-color: black !important;*/
 }
-
-
+.long-width {
+    min-width: 50%;
+}
+.labels {
+    width: 200px;
+}
+.vHeight {
+    margin-top: 10px;
+    margin-left: -80px;
+}
+.group {
+    margin-right: 400px !important;
+}
+.victim {
+    display: inline;
+    margin-left: 220px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.perp {
+    display: inline;
+    margin-left: 175px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}

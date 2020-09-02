@@ -19,21 +19,21 @@ namespace EagleEye.Models
         public string Description { get; set; }
         [Display(Name = "Time Of Incident")]
         public DateTimeOffset TimeOfIncident { get; set; }
-        [Display(Name = "Victim Height")]
+        [Display(Name = "Height")]
         public string VictimHeight { get; set; }
-        [Display(Name = "Victim Build")]
+        [Display(Name = "Build")]
         public Build? VictimBuild { get; set; }
-        [Display(Name = "Victim Age")]
+        [Display(Name = "Age")]
         [Range(1, 110, ErrorMessage = "Please report an age between 1 and 100")]
         public int? VictimAge { get; set; }
-        [Display(Name = "Perp Height")]
+        [Display(Name = "Height")]
         public string PerpHeight { get; set; }
-        [Display(Name = "Perp Build")]
+        [Display(Name = "Build")]
         public Build? PerpBuild { get; set; }
-        [Display(Name = "Perp Age")]
+        [Display(Name = "Age")]
         [Range(1, 110, ErrorMessage = "Please report an age between 1 and 100")]
         public int? PerpAge { get; set; }
-        [Display(Name = "Perp Transportation")]
+        [Display(Name = "Transportation")]
         public string Transportation { get; set; }
     }
 }
