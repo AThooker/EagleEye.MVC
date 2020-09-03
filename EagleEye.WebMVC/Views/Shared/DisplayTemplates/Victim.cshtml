@@ -9,6 +9,6 @@
         <li>
             @Html.DisplayNameFor(e => e.Age): @Model.Age
         </li>
-        @Html.ActionLink("Edit", "Edit", "Victim", new { id = Model.VictimID }, null) |
-        @Html.ActionLink("Delete", "Delete", "Victim", new { id = Model.VictimID }, null)
+        @Html.ActionLink("Edit", "Edit", "Victim", new { id = Model.VictimID }, new { style = "color: yellow;"}) |
+        @Html.ActionLink("Delete", "Delete", "Victim", new { id = Model.VictimID }, new { style = "color: yellow;" })
     </ul>

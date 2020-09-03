@@ -13,6 +13,6 @@
     <li>
         @Html.DisplayNameFor(e => e.Transportation): @Model.Transportation
     </li>
-    @Html.ActionLink("Edit", "Edit", "Perp", new { id = Model.PerpID }, null) |
-    @Html.ActionLink("Delete", "Delete", "Perp", new { id = Model.PerpID }, null)
+    @Html.ActionLink("Edit", "Edit", "Perp", new { id = Model.PerpID }, new { style = "color: yellow;" }) |
+    @Html.ActionLink("Delete", "Delete", "Perp", new { id = Model.PerpID }, new { style = "color: yellow;" })
 </ul>
