@@ -255,6 +255,7 @@
     <Content Include="Views\Perp\Edit.cshtml" />
     <Content Include="Views\Perp\Delete.cshtml" />
     <Content Include="Views\Admin\AdminIncidents.cshtml" />
+    <Content Include="Views\Admin\Users.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

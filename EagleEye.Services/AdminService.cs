@@ -11,11 +11,17 @@ namespace EagleEye.Services
     public class AdminService
     {
         //Get Users
-        public IEnumerable<ApplicationUser> GetAllUsers()
+        public IEnumerable<UserListItem> GetAllUsers()
         {
             using(var ctx = new ApplicationDbContext())
             {
-                return ctx.Users.ToList();
+                var query = ctx.Users.Select(
+                    e => new UserListItem
+                    {
+                        UserName = e.UserName,
+                        Email = e.Email
+                    });
+                return query.ToArray();
             }
         }
         public IEnumerable<IncidentListItem> GetIncidents()

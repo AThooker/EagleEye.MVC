@@ -14,7 +14,7 @@ namespace EagleEye.WebMVC.Controllers
         // GET: Admin
         public ActionResult Index()
         {
-            return RedirectToAction("Home","Home");
+            return RedirectToAction("Index","Home");
         }
         //Get: Users
         [ActionName("Users")]
