@@ -3,16 +3,16 @@
 @{
     ViewBag.Title = "Log in";
 }
+<h2 class="logoHead"><a href="https://localhost:44371/"><img src="~/EagleEyeLogo.png" alt="Eagle Eye" width="250" , height="190" /></a></h2>
 
-<h2>@ViewBag.Title.</h2>
+<h2 style="margin-bottom: -10px; font-family: 'Times New Roman', Times, serif;">--Log in--</h2>
+                <hr />
 <div class="row">
     <div class="col-md-8">
-        <section id="loginForm">
+        <section id="loginForm" style="margin-left: 30px;">
             @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
                 @Html.AntiForgeryToken()
-                <h4>Use a local account to log in.</h4>
-                <hr />
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group">
                     @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
@@ -30,30 +30,26 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
-                        <div class="checkbox">
-                            @Html.CheckBoxFor(m => m.RememberMe)
                             @Html.LabelFor(m => m.RememberMe)
+                        <div class="checkbox" style="margin-left: 30px; display: inline;">
+                            @Html.CheckBoxFor(m => m.RememberMe)
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Log in" class="btn btn-default" />
+                        <input type="submit" value="Log in" class="btn btn-default" style="background-color: grey; border: 2px solid black; margin-left: 100px; color: white; margin-top: 10px;"/>
                     </div>
                 </div>
                 <p>
-                    @Html.ActionLink("Register as a new user", "Register")
+                    <div style="color: black; margin-left: -50px; margin-top: 10px; margin-bottom: 5px;">Don't have an account?</div>
+                    @Html.ActionLink("Register For Account", "Register", null, new { style = "padding: 5px; color: white; border-radius: 10%; border: 2px solid black; background-color: grey; margin-left: -50px;" })
                 </p>
                 @* Enable this once you have account confirmation enabled for password reset functionality
                     <p>
                         @Html.ActionLink("Forgot your password?", "ForgotPassword")
                     </p>*@
             }
-        </section>
-    </div>
-    <div class="col-md-4">
-        <section id="socialLoginForm">
-            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
         </section>
     </div>
 </div>
