@@ -6,7 +6,7 @@
         @Html.AntiForgeryToken()
 
         <li class="btn-group nav">
-            <button type="button" class="btn navbar-btn" style="background-color: #428bc7">@User.Identity.Name</button>
+            <button type="button" class="btn navbar-btn" style="background-color: #428bc7">@User.Identity.Name.ToUpper()</button>
             <button type="button" class="btn navbar-btn dropdown-toggle" data-toggle="dropdown">
                 <span class="caret"></span>
                 <span class="sr-only">Toggle Dropdown</span>

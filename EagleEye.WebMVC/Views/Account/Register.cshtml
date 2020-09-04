@@ -6,17 +6,23 @@
 <h2 class="logoHead"><a href="https://localhost:44371/"><img src="~/EagleEyeLogo.png" alt="Eagle Eye" width="250" , height="190" /></a></h2>
 
 <h2 style="margin-top: -10px; font-family: 'Times New Roman', Times, serif;">--Register--</h2>
-    <h6 style="margin-left: 10px;">Create Your Account</h6>
-    <hr />
+<h6 style="margin-left: 10px;">Create Your Account</h6>
+<hr />
 
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" , style = "margin-left: 100px;" }))
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form", style = "margin-left: 100px;" }))
 {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group" style="font-family: 'Times New Roman', Times, serif;">
-        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label"})
+        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
         </div>
     </div>
     <div class="form-group">
@@ -30,6 +36,12 @@
         @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("User Role", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownList("UserRoles", (SelectList)ViewBag.Name, "Your Role")
         </div>
     </div>
     <div class="form-group">

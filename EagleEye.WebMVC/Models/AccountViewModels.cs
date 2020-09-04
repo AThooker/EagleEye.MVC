@@ -49,9 +49,8 @@ namespace EagleEye.WebMVC.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "Username")]
+        public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -64,6 +63,14 @@ namespace EagleEye.WebMVC.Models
 
     public class RegisterViewModel
     {
+        [Required]
+        [Display(Name = "User Roles")]
+        public string UserRoles { get; set; }
+
+        [Required]
+        [Display(Name = "Username")]
+        public string UserName { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

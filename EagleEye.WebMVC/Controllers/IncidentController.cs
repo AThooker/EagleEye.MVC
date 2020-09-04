@@ -1,6 +1,8 @@
-﻿using EagleEye.Models;
+﻿using EagleEye.Data;
+using EagleEye.Models;
 using EagleEye.Services;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +23,7 @@ namespace EagleEye.WebMVC.Controllers
             var model = service.GetIncidents();
             return View(model);
         }
+        
         // GET: Create (getting the view in order to create an incident)
         public ActionResult Create()
         {
@@ -32,7 +35,7 @@ namespace EagleEye.WebMVC.Controllers
         public ActionResult Create(IncidentCreate model)
         {
             if (!ModelState.IsValid) return View(model);
-            
+
             var service = CreateIncidentService();
 
             if (service.CreateIncident(model))
