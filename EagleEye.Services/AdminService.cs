@@ -62,5 +62,17 @@ namespace EagleEye.Services
                 };
             }
         }
+        //public IEnumerable<PerpDetail> GetPerpsBySimilarities()
+        //{
+        //    using(var ctx = new ApplicationDbContext())
+        //    {
+        //        var perps = ctx.Perps;
+        //        var query = ctx.Perps
+        //            .Select(
+        //            e => new PerpDetail
+        //            {
+        //            });
+        //    }
+        //}
     }
 }

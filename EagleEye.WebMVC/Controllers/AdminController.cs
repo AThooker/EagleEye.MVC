@@ -40,5 +40,13 @@ namespace EagleEye.WebMVC.Controllers
             var model = service.GetIncidentById(id);
             return View(model);
         }
+        //Get: Admin/PerpPatterns
+        [ActionName("PerpPatterns")]
+        public ActionResult PerpPatterns()
+        {
+            var service = new AdminService();
+            var model = service.GetPerpsBySimilarities();
+            return View(model);
+        }
     }
 }
