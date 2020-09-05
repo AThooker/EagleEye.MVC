@@ -32,5 +32,13 @@ namespace EagleEye.WebMVC.Controllers
             var model = service.GetIncidents();
             return View(model);
         }
+        //Get : Admin/Details/{id}
+        [ActionName("AdminDetails")]
+        public ActionResult AdminDetails(int id)
+        {
+            var service = new AdminService();
+            var model = service.GetIncidentById(id);
+            return View(model);
+        }
     }
 }

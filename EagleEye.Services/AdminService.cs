@@ -43,5 +43,24 @@ namespace EagleEye.Services
                 return query.ToArray();
             }
         }
+        public IncidentDetail GetIncidentById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                    .Incidents
+                    .Single(e => e.IncidentID == id);
+                return new IncidentDetail
+                {
+                    IncidentID = entity.IncidentID,
+                    Address = entity.Address,
+                    Description = entity.Description,
+                    TimeOfIncident = entity.TimeOfIncident,
+                    Victim = entity.Victims.Where(e => e.IncidentId == entity.IncidentID).ToList(),
+                    Perp = entity.Perps.Where(e => e.IncidentId == entity.IncidentID).ToList(),
+                    CreatedUtc = entity.CreatedUtc
+                };
+            }
+        }
     }
 }

@@ -1,0 +1,72 @@
+﻿@model EagleEye.Models.IncidentDetail
+@using EagleEye.Data
+
+@{
+    ViewBag.Title = "Details";
+
+    var vicList = new List<EagleEye.Data.Victim>();
+}
+<h2 class="logoHead"><a href="https://localhost:44371/"><img src="~/EagleEyeLogo.png" alt="Eagle Eye" width="250" , height="190" /></a></h2>
+
+<h2 class="details"><u>Details of Incident</u></h2>
+
+<div class="detailsForm">
+    <dl class="dl-horizontal">
+        <dt class="term">
+            @Html.DisplayNameFor(model => model.IncidentID)
+        </dt>
+
+        <dd class="desc" style="display: inline-block; margin-left: 20px;">
+            @Html.DisplayFor(model => model.IncidentID)
+        </dd>
+
+        <dt class="term">
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd class="desc">
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt class="term">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd class="desc">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class="term">
+            @Html.DisplayNameFor(model => model.TimeOfIncident)
+        </dt>
+
+        <dd class="desc">
+            @Html.DisplayFor(model => model.TimeOfIncident)
+        </dd>
+
+        <dt class="term">
+            @Html.DisplayNameFor(model => model.CreatedUtc)
+        </dt>
+
+        <dd class="desc">
+            @Html.DisplayFor(model => model.CreatedUtc)
+        </dd>
+        <dt class="term">
+            @Html.DisplayNameFor(model => model.Victim)
+        </dt>
+        <dd class="desc">
+            @Html.DisplayFor(model => model.Victim)
+        </dd>
+        <dt class="term">
+            @Html.DisplayNameFor(model => model.Perp)
+        </dt>
+
+        <dd class="desc">
+            @Html.DisplayFor(model => model.Perp)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index", null, new { style = "color: black;" })
+</p>
+

@@ -3,12 +3,10 @@
 @{
     ViewBag.Title = "AdminIncidents";
 }
+<h2 class="logoHead"><a href="https://localhost:44371/"><img src="~/EagleEyeLogo.png" alt="Eagle Eye" width="250" , height="190" /></a></h2>
 
-<h2>AdminIncidents</h2>
+<h2>--Administrative View--</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -29,27 +27,30 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.IncidentID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Address)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TimeOfIncident)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedUtc)
-        </td>
-        <td>
-           | @Html.ActionLink("Details", "Details", new { id = item.IncidentID }) |
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IncidentID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeOfIncident)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedUtc)
+            </td>
+            <td>
+                | @Html.ActionLink("Details", "AdminDetails", new { id = item.IncidentID }, new { style = "color: black;"}) |
+            </td>
+        </tr>
+    }
 
 </table>
+<p class="homeBtn"><a href="https://localhost:44371/Home/" class="btn btn-primary btn-lg" id="homeBtn">&#10038 Homepage &#10038;</a></p>
+
