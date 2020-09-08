@@ -15,7 +15,9 @@ namespace EagleEye.Services
         {
             using(var ctx = new ApplicationDbContext())
             {
-                var query = ctx.Users.Select(
+                var query = ctx
+                    .Users
+                    .Select(
                     e => new UserListItem
                     {
                         UserName = e.UserName,
@@ -62,17 +64,42 @@ namespace EagleEye.Services
                 };
             }
         }
-        //public IEnumerable<PerpDetail> GetPerpsBySimilarities()
-        //{
-        //    using(var ctx = new ApplicationDbContext())
-        //    {
-        //        var perps = ctx.Perps;
-        //        var query = ctx.Perps
-        //            .Select(
-        //            e => new PerpDetail
-        //            {
-        //            });
-        //    }
-        //}
+        public IEnumerable<PerpDetail> GetPerps()
+        {
+            using (var context = new ApplicationDbContext())
+            {
+                var query = context
+                    .Perps
+                    .Select(x => new PerpDetail
+                    {
+                        PerpID = x.PerpID,
+                        Age = x.Age,
+                        Build = x.Build,
+                        Height = x.Height,
+                        Transportation = x.Transportation,
+                        IncidentId = x.IncidentId
+
+                    });
+                return query.ToArray();
+            }
+        }
+        public IEnumerable<VictimDetail> GetVictims()
+        {
+            using (var context = new ApplicationDbContext())
+            {
+                var query = context
+                    .Victims
+                    .Select(x => new VictimDetail
+                    {
+                        VictimID = x.VictimID,
+                        Age = x.Age,
+                        Build = x.Build,
+                        Height = x.Height,
+                        IncidentId = x.IncidentId
+
+                    });
+                return query.ToArray();
+            }
+        }
     }
 }

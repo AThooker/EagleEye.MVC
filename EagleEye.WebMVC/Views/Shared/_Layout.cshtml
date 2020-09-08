@@ -44,14 +44,23 @@
                     <li class="nav">
                         @if (User.IsInRole("Admin"))
                         {
-                            @Html.ActionLink("Patterns", "PerpPatterns", "Admin", null, new { @class = "navLink" });
+                            @Html.ActionLink("Perps", "GetAllPerps", "Admin", null, new { @class = "navLink" });
                         }
                         else
                         {
                         @Html.ActionLink("Mission", "About", "Home", null, new { @class = "navLink" })
                         }
                     </li>
-                    <li class="nav">@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "navLink" })</li>
+                    <li class="nav">
+                        @if (User.IsInRole("Admin"))
+                        {
+                            @Html.ActionLink("Victims", "GetAllVictims", "Admin", null, new { @class = "navLink" });
+                        }
+                        else
+                        {
+                            @Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "navLink" })
+                        }
+                        </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

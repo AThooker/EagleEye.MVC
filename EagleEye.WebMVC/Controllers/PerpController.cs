@@ -61,7 +61,7 @@ namespace EagleEye.WebMVC.Controllers
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteVictim(int id)
+        public ActionResult DeletePerp(int id)
         {
             var service = CreatePerpService();
 
@@ -69,7 +69,7 @@ namespace EagleEye.WebMVC.Controllers
 
             TempData["SaveResult"] = "Perp was deleted";
 
-            return RedirectToAction("Index", "Incident");
+            return RedirectToAction("GetAllPerps", "Admin");
         }
         public PerpService CreatePerpService()
         {

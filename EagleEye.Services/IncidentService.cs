@@ -27,7 +27,10 @@ namespace EagleEye.Services
                 Build = model.VictimBuild,
                 Age = model.VictimAge
             };
+            if (victim.Height != null || victim.Age != null)
+            {
             ctx.Victims.Add(victim);
+            }
             
             var perp = new Perp()
             {
@@ -36,7 +39,10 @@ namespace EagleEye.Services
                 Age = model.PerpAge,
                 Transportation = model.Transportation
             };
-            ctx.Perps.Add(perp);
+            if(perp.Height != null || perp.Age != null || perp.Transportation != null)
+            {
+                ctx.Perps.Add(perp);
+            }
             var incident = new Incident()
             {
                 OwnerId = _userId,
@@ -76,7 +82,7 @@ namespace EagleEye.Services
             {
                 var entity = ctx
                     .Incidents
-                    .Single(e => e.IncidentID == id && e.OwnerId == _userId);
+                    .Single(e => e.IncidentID == id);
                 return new IncidentDetail
                 {
                     IncidentID = entity.IncidentID,
@@ -110,7 +116,7 @@ namespace EagleEye.Services
             {
                 var entity = ctx
                     .Incidents
-                    .Single(e => e.IncidentID == incidentID && e.OwnerId == _userId);
+                    .Single(e => e.IncidentID == incidentID);
                 ctx.Incidents.Remove(entity);
                 return ctx.SaveChanges() == 1;
             }
