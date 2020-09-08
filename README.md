@@ -30,10 +30,12 @@ The final requirement to earn the Red Badge for this program was to create an AS
 <br />
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 <br/>
+<b>Run the App</b>
 Once you have successfully cloned the project locally, you can run the project by pushing the green start button near the top of the page.
 <br/>
 If it has successfully run, it should look like this:
 <br />
+<br/>
 <img src="https://user-images.githubusercontent.com/66280480/92505612-57ff5980-f1d2-11ea-9478-8f656b997c55.png" align="left" width="500" height="240"/>
 <br />
 <br />
@@ -45,15 +47,16 @@ If it has successfully run, it should look like this:
 <br />
 <br />
 <br />
-From here, you can register as a new user, and navigate your way through the application testing it's functionality.
+- From here, you can register as a new user, and navigate your way through the application testing it's functionality.
 <br />
-As mentioned before, the app does contain user roles. The "Admin" role is programmed within the code and cannot be accessed by someone using the app without the code. 
+- As mentioned before, the app does contain user roles. The "Admin" role is programmed within the code and cannot be accessed by someone using the app without the code. 
 <br/>
-To do this, logout of your current account and press the log in button near the top right of the web page.
+- To do this, logout of your current account and press the log in button near the top right of the web page.
 <br /> 
-Use these credentials to login: Username = Austin , Password = testing
+- Use these credentials to login: Username = Austin , Password = testing
 <br/>
-This will give you access due to the hard coded profile in the project here: 
+- This will give you access due to the hard coded profile in the project here: 
+<br/>
 <br/>
 <img src="https://user-images.githubusercontent.com/66280480/92507414-f2f93300-f1d4-11ea-87ef-1157146ead58.png" align="left" width="500" height="240"/>
 <br />
@@ -66,6 +69,8 @@ This will give you access due to the hard coded profile in the project here:
 <br />
 <br />
 <br />
+---------------------------------------------------------------------------------------------------------------------------------------------------
+<br/>
 <b>Additional Resources used</b>: 
 <br />
 https://dbdiagram.io/d/5f315d0608c7880b65c5bcf3
