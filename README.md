@@ -77,8 +77,19 @@ If it has successfully run, it should look like this:
 <br/>
 - You will notice that the navbar is now different since you are in an admin role, this is achieved by using C# in the razor pages of the "layout" view. 
 <br/>
-<img src="https://user-images.githubusercontent.com/66280480/92507414-f2f93300-f1d4-11ea-87ef-1157146ead58.png" align="left" width="500" height="240"/>
-
+<img src="https://user-images.githubusercontent.com/66280480/92508959-73209800-f1d7-11ea-8f54-02d2c8ccb8ae.png" align="left" width="500" height="240"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+---------------------------------------------------------------------------------------------------------------------------------------------------
+<br/>
 - You may create an incident, and delete any report, perp, or victim. However, you cannot edit others' submissions nor the corresponding victims or perps. 
 <b>Additional Resources used</b>: 
 <br />
