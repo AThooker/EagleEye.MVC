@@ -17,5 +17,6 @@ namespace EagleEye.Models
         public Build? Build { get; set; }
         [Display(Name = "Age")]
         public int? Age { get; set; }
+        public int IncidentId { get; set; }
     }
 }

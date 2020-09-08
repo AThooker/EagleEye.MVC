@@ -69,7 +69,7 @@ namespace EagleEye.WebMVC.Controllers
 
             TempData["SaveResult"] = "Victim was deleted";
 
-            return RedirectToAction("Index", "Incident");
+            return RedirectToAction("GetAllVictims", "Admin");
         }
         public VictimService CreateVictimService()
         {

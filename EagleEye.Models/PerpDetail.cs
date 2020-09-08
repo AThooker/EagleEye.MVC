@@ -19,5 +19,7 @@ namespace EagleEye.Models
         public int? Age { get; set; }
         [Display(Name = "Transportation")]
         public string Transportation { get; set; }
+        [Display(Name = "Incident ID")]
+        public int IncidentId { get; set; }
     }
 }

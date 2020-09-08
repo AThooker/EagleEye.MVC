@@ -110,7 +110,7 @@ namespace EagleEye.WebMVC.Controllers
 
             TempData["SaveResult"] = "The incident was deleted";
 
-            return RedirectToAction("Index");
+            return RedirectToAction("AdminIncidents", "Admin");
         }
         private IncidentService CreateIncidentService()
         {

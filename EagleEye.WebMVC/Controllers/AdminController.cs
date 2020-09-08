@@ -1,4 +1,5 @@
-﻿using EagleEye.Models;
+﻿using EagleEye.Data;
+using EagleEye.Models;
 using EagleEye.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -40,12 +41,21 @@ namespace EagleEye.WebMVC.Controllers
             var model = service.GetIncidentById(id);
             return View(model);
         }
-        //Get: Admin/PerpPatterns
-        [ActionName("PerpPatterns")]
-        public ActionResult PerpPatterns()
+        //Get: Admin/GetAllPerps
+        [ActionName("GetAllPerps")]
+        public ActionResult GetAllPerps()
         {
             var service = new AdminService();
-            var model = service.GetPerpsBySimilarities();
+            var model = service.GetPerps();
+            return View(model);
+        }
+
+        //Get: Admin/GetAllVictims
+        [ActionName("GetAllVictims")]
+        public ActionResult GetAllVictims()
+        {
+            var service = new AdminService();
+            var model = service.GetVictims();
             return View(model);
         }
     }

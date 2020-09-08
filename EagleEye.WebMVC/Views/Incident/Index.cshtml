@@ -48,7 +48,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Address)
             </td>
-            <td>
+            <td style="max-width: 150px; max-height: 1000px;">
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
@@ -59,8 +59,7 @@
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.IncidentID }, new { @class = "attrib" }) |
-                @Html.ActionLink("Details", "Details", new { id = item.IncidentID }, new { @class = "attrib" }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.IncidentID }, new { @class = "attrib" })
+                @Html.ActionLink("Details", "Details", new { id = item.IncidentID }, new { @class = "attrib" }) 
             </td>
         </tr>
     }
