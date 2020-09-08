@@ -87,22 +87,26 @@ If it has successfully run, it should look like this:
 <br />
 <br />
 <br />
+- You may create an incident, and delete any report, perp, or victim. However, you cannot edit others' submissions nor the corresponding victims or perps. 
+<br/> 
+- The next function of this project will be/should be to get perps or victims by similarities and try to pinpoint any trends that may take effect throughout the incidents         reported
 <br />
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 <br/>
-- You may create an incident, and delete any report, perp, or victim. However, you cannot edit others' submissions nor the corresponding victims or perps. 
 <b>Additional Resources used</b>: 
 <br />
-https://dbdiagram.io/d/5f315d0608c7880b65c5bcf3
+https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-a-more-complex-data-model-for-an-asp-net-mvc-application#:~:text=The%20Entity%20Framework%20doesn't,updates%20simpler%20and%20more%20efficient.
 <br />
-https://trello.com/b/HNSxnqHJ/welcome-to-trello
+https://stackoverflow.com/questions/18165879/mvc-4-displaying-a-list-property-on-a-view
 <br />
-https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-a-more-complex-data-model-for-an-asp-net-mvc-application
+https://docs.microsoft.com/en-us/dotnet/csharp/linq/query-a-collection-of-objects
 <br />
-https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum
+https://www.c-sharpcorner.com/UploadFile/asmabegam/Asp-Net-mvc-5-security-and-creating-user-role/
 <br />
-https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-6
+https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-models-and-data-access
 <br />
+https://trello.com/b/wnf5ywSh/eagleeye
+<br/>
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 <br />
 <b>Project Created by</b>:
