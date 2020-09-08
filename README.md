@@ -34,6 +34,17 @@ Once you have successfully cloned the project locally, you can run the project b
 <br/>
 If it has successfully run, it should look like this:
 <br />
+<img src="https://user-images.githubusercontent.com/66280480/92505612-57ff5980-f1d2-11ea-9478-8f656b997c55.png" align="left" width="500" height="240"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
 <b>Additional Resources used</b>: 
 <br />
 https://dbdiagram.io/d/5f315d0608c7880b65c5bcf3
