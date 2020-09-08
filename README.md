@@ -44,7 +44,6 @@ If it has successfully run, it should look like this:
 <br />
 <br />
 <br />
-
 <b>Additional Resources used</b>: 
 <br />
 https://dbdiagram.io/d/5f315d0608c7880b65c5bcf3
