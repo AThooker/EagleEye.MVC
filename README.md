@@ -94,7 +94,7 @@ If it has successfully run, it should look like this:
 <br />
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 <br/>
-<b>Stretch Goals<b/>
+<b>Stretch Goals</b>
   <br/>
 - I had many stretch goals for this app, some of the ones I did not achieve in the alotted time are:
   <br/>
