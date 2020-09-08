@@ -1,5 +1,5 @@
-#Eagle Eye (MVC design pattern)
-## **Austin Hooker**
+# Eagle Eye (MVC design pattern)
+## Austin Hooker
 #### *Software Development Bootcamp @ Eleven Fifty Academy*
 
 The final requirement to earn the Red Badge for this program was to create an ASP.Net web application using the model-view-controller (MVC) design pattern. My .Net Framework MVC Web Application provides users the ability to report any curious situations in which someone may be or has been a victim of human trafficking. This application allows users to input what they saw, who was involved(if they saw someone), the times at which it took place, and any of their own past reports. They can also go back into their account and update anything else they think of at a later date. This app allows for an administrator of the app to go in and see the entire database, whether it be all victims, all perps, or all incidents. The admin also has the authority to delete objects while the lay user does not.
