@@ -31,6 +31,7 @@ The final requirement to earn the Red Badge for this program was to create an AS
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 <br/>
 <b>Run the App</b>
+<br/>
 Once you have successfully cloned the project locally, you can run the project by pushing the green start button near the top of the page.
 <br/>
 If it has successfully run, it should look like this:
