@@ -88,10 +88,21 @@ If it has successfully run, it should look like this:
 <br />
 <br />
 <br />
+<br/>
 - You may create an incident, and delete any report, perp, or victim. However, you cannot edit others' submissions nor the corresponding victims or perps. 
 <br/> 
-- The next function of this project will be/should be to get perps or victims by similarities and try to pinpoint any trends that may take effect throughout the incidents         reported
 <br />
+---------------------------------------------------------------------------------------------------------------------------------------------------
+<br/>
+<b>Stretch Goals<b/>
+  <br/>
+- I had many stretch goals for this app, some of the ones I did not achieve in the alotted time are:
+  <br/>
+1. Get perps or victims by similarities and try to pinpoint any trends that may take effect throughout the incidents reported
+<br />
+2. Allow users to more easily share their location without have to type in the entire address
+  <br/>
+3. Let all users see incidents in their specific area (maybe by radius of address or something alike)
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 <br/>
 <b>Additional Resources used</b>: 
