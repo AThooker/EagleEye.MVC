@@ -9,7 +9,7 @@ The final requirement to earn the Red Badge for this program was to create an AS
 <i>(This application was built and tested in Visual Studio)</i>
 <br />
 <br />
-1.	Go to https://github.com/AThooker/EagleEye.MVC 
+1.	Go to https://github.com/AThooker/EagleEye.MVC/tree/master 
 <br />
 2.	On this page, make sure you are on the master branch (located directly above the blue box containing the name of the last committed changes)
 <br />
