@@ -55,7 +55,7 @@ Use these credentials to login: Username = Austin , Password = testing
 <br/>
 This will give you access due to the hard coded profile in the project here: 
 <br/>
-<img src="https://user-images.githubusercontent.com/66280480/92505612-57ff5980-f1d2-11ea-9478-8f656b997c55.png" align="left" width="500" height="240"/>
+<img src="https://user-images.githubusercontent.com/66280480/92507414-f2f93300-f1d4-11ea-87ef-1157146ead58.png" align="left" width="500" height="240"/>
 <br />
 <br />
 <br />
