@@ -98,9 +98,12 @@ If it has successfully run, it should look like this:
   <br/>
 - I had many stretch goals for this app, some of the ones I did not achieve in the alotted time are:
   <br/>
+  <br/>
 1. Get perps or victims by similarities and try to pinpoint any trends that may take effect throughout the incidents reported
 <br />
+  <br/>
 2. Allow users to more easily share their location without have to type in the entire address
+  <br/>
   <br/>
 3. Let all users see incidents in their specific area (maybe by radius of address or something alike)
 ---------------------------------------------------------------------------------------------------------------------------------------------------
