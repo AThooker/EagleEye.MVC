@@ -29,6 +29,10 @@ The final requirement to earn the Red Badge for this program was to create an AS
 6.	After the project is cloned, if there are build errors then you may have to restore NuGet packages that come along with the project. Another solution may be restarting Visual Studio.
 <br />
 ---------------------------------------------------------------------------------------------------------------------------------------------------
+<br/>
+Once you have successfully cloned the project locally, you can run the project by pushing the green start button near the top of the page.
+<br/>
+If it has successfully run, it should look like this:
 <br />
 <b>Additional Resources used</b>: 
 <br />
