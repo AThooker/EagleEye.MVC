@@ -58,5 +58,12 @@ namespace EagleEye.WebMVC.Controllers
             var model = service.GetVictims();
             return View(model);
         }
+
+        //public ActionResult GetSimilarPerps()
+        //{
+        //    var service = new AdminService();
+        //    var model = service.GetSimilarPerps;
+        //    return View(model);
+        //}
     }
 }

@@ -101,5 +101,33 @@ namespace EagleEye.Services
                 return query.ToArray();
             }
         }
+        //public IComparable<Perp> GetSimilarPerps()
+        //{
+        //    Compare()
+        //}
+        //public IEnumerable<PerpDetail> GetPerpBySimilar()
+        //{
+        //    var ctx = new ApplicationDbContext();
+        //    foreach (var perp in ctx.Perps)
+        //    {
+        //        if(perp.Age >= 30)
+        //        {
+        //            var query = ctx
+        //            .Perps
+        //            .Select(x => new PerpDetail
+        //            {
+        //                PerpID = x.PerpID,
+        //                Age = x.Age,
+        //                Build = x.Build,
+        //                Height = x.Height,
+        //                Transportation = x.Transportation,
+        //                IncidentId = x.IncidentId
+
+        //            });
+        //            return query.ToArray();
+        //        }
+        //    }
+        //            return null;
+        //}
     }
 }
