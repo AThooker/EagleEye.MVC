@@ -1,0 +1,22 @@
+﻿@model EagleEye.Data.Victim
+    <ul class="vicDetails">
+        <li>
+            @Html.DisplayNameFor(e => e.Height): @Model.Height
+        </li>
+        <li>
+            @Html.DisplayNameFor(e => e.Build): @Model.Build
+        </li>
+        <li>
+            @Html.DisplayNameFor(e => e.Age): @Model.Age
+        </li>
+        |
+        @if(User.IsInRole("Admin"))
+        {
+            @Html.ActionLink("All Victims", "GetAllVictims", "Admin", null, new {style = "color: black; border-bottom: 2px solid yellow;"})
+        }
+        else
+        { 
+        @Html.ActionLink("Edit", "Edit", "Victim", new { id = Model.VictimID }, new { style = "color: black; border-bottom: 2px solid yellow;"}) 
+        }
+        |
+    </ul>

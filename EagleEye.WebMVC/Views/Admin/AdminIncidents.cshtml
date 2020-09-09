@@ -1,0 +1,67 @@
+﻿@model IEnumerable<EagleEye.Models.IncidentListItem>
+
+@{
+    ViewBag.Title = "AdminIncidents";
+}
+<h2 class="logoHead"><a href="https://localhost:44371/"><img src="~/EagleEyeLogo.png" alt="Eagle Eye" width="250" , height="190" /></a></h2>
+
+<h2>--Administrative View--</h2>
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IncidentID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeOfIncident)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedUtc)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IncidentID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td style="max-width: 150px; max-height: 1000px;">
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeOfIncident)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedUtc)
+            </td>
+            <td>
+                | @Html.ActionLink("Details", "AdminDetails", new { id = item.IncidentID }, new { style = "color: black;" }) |
+                | @Html.ActionLink("Delete", "Delete", "Incident", new { id = item.IncidentID }, new { style = "color: black;" }) |
+            </td>
+        </tr>
+    }
+
+</table>
+<p class="homeBtn"><a href="https://localhost:44371/Home/" class="btn btn-primary btn-lg" id="homeBtn">&#10038 Homepage &#10038;</a></p>
+

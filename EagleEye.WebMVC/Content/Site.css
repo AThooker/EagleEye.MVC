@@ -1,0 +1,207 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #428bc7;
+}
+hr {
+    border: 2px solid #dcdf52;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.navbar-inverse {
+    background-color: #676767;
+    border-bottom: 3px solid #dcdf52;
+    color: black;
+}
+.nav {
+    margin-top: 5px;
+}
+.navLink {
+    color: #0b0101 !important;
+}
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+/*Jumbotron*/
+.jumbotron {
+    background-color: none;
+    width: 600px;
+    float: right;
+    margin-top: 60px;
+    height: 500px;
+    border: 3px solid #676767;
+}
+.logoJumbo {
+    margin-top: -75px;
+    padding-bottom: -3em;
+    margin-left: 100px;
+}
+.mission {
+    display: block;
+    border: 2px solid #676767;
+    margin-right: 333px;
+    border-radius: 8px;
+}
+
+/*Home page body outside of jumbo*/
+.row{
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.reportArr {
+    margin-left: 110px;
+    margin-top: -10px;
+}
+.report {
+    border: 2px solid #dcdf52;
+    margin-right: 114px;
+    border-radius: 8px;
+    margin-left: 50px;
+}
+.resources {
+    border: 2px solid #676767;
+    margin-right: 140px;
+    border-radius: 8px;
+    margin-left: 72px;
+}
+/*Index Incident Page*/
+.logoHead {
+    margin-left: 400px;
+}
+.create {
+    color: black;
+    border-bottom: 2px solid yellow;
+    margin-left: 500px;
+    margin-top: -10px;
+}
+.table{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin-top: 20px;
+}
+tr {
+    border-top: 2px solid black;
+}
+.attrib {
+    color: black;
+    border-bottom: 2px solid yellow;
+}
+.street {
+    margin-left: 190px;
+    border: 3px solid #676767;
+    border-radius: 5px;
+}
+.click {
+    margin-left: 190px;
+}
+.homeBtn {
+    margin-left: 455px;
+    margin-top: 30px;
+}
+#homeBtn {
+    background-color: #676767;
+    border: 2px solid #dcdf52;
+}
+/*Create Incident Page*/
+.fillRep {
+   margin-top: -50px;
+   font-family: 'Times New Roman', Times, serif;
+}
+#infoSmall {
+    margin-left: 10px;
+}
+.form-group {
+    margin-left: 100px !important;
+    width: 1200px !important;
+}
+.long-width {
+    min-width: 50%;
+}
+.labels {
+    width: 200px;
+}
+.vHeight {
+    margin-top: 10px;
+    margin-left: -80px;
+}
+.group {
+    margin-right: 400px !important;
+}
+.victim {
+    display: inline;
+    margin-left: 220px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.perp {
+    display: inline;
+    margin-left: 175px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+/*Edit page*/
+.update {
+    margin-top: -20px;
+}
+.crowd {
+    display: inline-block;
+    float: left;
+    height: 300px;
+    width: 48%;
+    border: 2px solid black;
+    border-radius: 5% 40%;
+}
+.together {
+    display: inline-block;
+    float: right;
+    height: 300px;
+    width: 48%;
+    border: 2px solid black;
+    border-radius: 40% 5%;
+}
+.editBottom {
+    margin-top: 340px;
+}
+/*Details Page Incident*/
+.details {
+    margin-left: 420px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.detailsForm {
+    margin-left: 340px;
+    margin-top: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+dt, dd {
+    display: block;
+    margin-top: 30px;
+}
+/*Delete Incident*/
+.delete {
+    margin-left: 500px;
+    margin-top: -50px;
+}
+.wrap {
+    margin-left: 350px;
+}
+/*Perp edit*/
+.upPerp {
+    margin-left: 450px;
+}
+

@@ -1,0 +1,26 @@
+﻿@model EagleEye.Data.Perp
+
+    <ul>
+        <li>
+            @Html.DisplayNameFor(e => e.Height): @Model.Height
+        </li>
+        <li>
+            @Html.DisplayNameFor(e => e.Build): @Model.Build
+        </li>
+        <li>
+            @Html.DisplayNameFor(e => e.Age): @Model.Age
+        </li>
+        <li>
+            @Html.DisplayNameFor(e => e.Transportation): @Model.Transportation
+        </li>
+        |
+        @if (User.IsInRole("Admin"))
+        {
+            @Html.ActionLink("All Perps", "GetAllPerps", "Admin", null, new { style = "color: black; border-bottom: 2px solid yellow;" })
+        }
+        else
+        {
+            @Html.ActionLink("Edit", "Edit", "Victim", new { id = Model.PerpID }, new { style = "color: black; border-bottom: 2px solid yellow;" })
+        }
+        |
+    </ul>
