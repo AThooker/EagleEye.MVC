@@ -4,7 +4,7 @@
     ViewBag.Title = "Users";
 }
 
-<h2 class="logoHead"><a href="https://localhost:44371/"><img src="~/EagleEyeLogo.png" alt="Eagle Eye" width="250" , height="190" /></a></h2>
+<h2 class="logoHead"><a href="https://eagleeyewebmvc20200909094613.azurewebsites.net/"><img src="~/EagleEyeLogo.png" alt="Eagle Eye" width="250" , height="190" /></a></h2>
 
 <h2>--Users--</h2>
 
@@ -29,9 +29,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
-            <td>
+            @*<td>
                 @Html.ActionLink("Delete", "Delete", new { id=item.UserName}, new { style = "color: black;"})
-            </td>
+            </td>*@
         </tr>
     }
 
